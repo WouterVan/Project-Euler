@@ -6,7 +6,32 @@ namespace Problem7
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            long number = 5;
+            var count = 3;
+
+
+
+
+            while (count < 10001)
+            {
+                number += 2;
+                bool isPrime = true;
+                for (int i = 2; i < number; i++)
+                    if (number % i == 0 || number % 3 == 0)
+                    {
+                        isPrime = false;
+                        break;
+                    }
+
+                if (isPrime)
+                {
+                    count++;
+
+                }
+
+            }
+
+            Console.WriteLine(number);
         }
     }
 }
